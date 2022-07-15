@@ -1,12 +1,10 @@
 #!/bin/bash
 
-#echo "SOME_ADDRESS = ${instance_identifier}" > /tmp/
-#mkdir ${instance_identifier}
 #Update
 apt-get update
 
 
-#Install React Web App
+#Install React Web App and autolaunch on reboot
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 apt -y install nodejs
 npx create-react-app /home/ubuntu/my-app
@@ -14,7 +12,8 @@ npm run build --prefix /home/ubuntu/my-app
 npm install -g serve
 npm install -g pm2
 pm2 serve /home/ubuntu/my-app/build 3000 --spa
-
+pm2 save
+pm2 startup
 
 mkdir /var/log/tcpdumpd
 #Write configuration file for tcpdump daemon
