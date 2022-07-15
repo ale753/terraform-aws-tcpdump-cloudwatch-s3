@@ -21,3 +21,5 @@ Launch:
 
 terraform init
 terraform apply -var-file="development.tfvars"
+
+[Imgur](https://i.imgur.com/swFLN9c.png)
