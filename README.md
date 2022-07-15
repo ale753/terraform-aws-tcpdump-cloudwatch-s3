@@ -10,7 +10,7 @@ This Terraform project will create:
 The user-data script installs Cloudwatch Agent, tcpdump daemon and react application. Note that it is reccomended that you create a custom image with the application installed rather than installing it every time (especially if you need to autoscale and often stop and reboot instances )
 
 
-##Diagram of the simple architecture
+## Diagram of the simple architecture
 
 [![Screenshot-from-2020-11-01-20-44-17.png](https://i.imgur.com/swFLN9c.png)](https://imgur.com/swFLN9c)
 
